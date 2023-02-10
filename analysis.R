@@ -181,24 +181,6 @@ A_ID_res <- do_analysis(A_ID)
 B_noID_res <- do_analysis(B_noID)
 B_ID_res <- do_analysis(B_ID)
 
-# ----------------------------------------------------------------------------
-# explore why sensitivity is giving higher life expectancy despite more deaths
-# ----------------------------------------------------------------------------
-
-mA <- glm(deaths ~ poly(age, 2)*exposure + offset(log(pys)), data = A_noID[sex == 1], family = 'poisson')
-mB <- glm(deaths ~ poly(age, 2)*exposure + offset(log(pys)), data = B_noID[sex == 1], family = 'poisson')
-
-nd <- CJ(age = 18:100, pys = 1, exposure = 0)
-nd[, A := predict(mA, newdata = nd, type = 'response') * 100000]
-nd[, B := predict(mB, newdata = nd, type = 'response') * 100000]
-
-with(nd, {
-  plot(age, log(A), type = 'l', col = 'red')
-  lines(age, log(B), col = 'blue')
-})
-
-# the extra deaths are at a younger age, so the line slope changes and the mortality rate at older ages is assumed lower
-
 # -------------------
 # plot modelled rates
 # -------------------
