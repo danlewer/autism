@@ -1,4 +1,8 @@
-# Life expectancy for people with diagnoses of autism in the UK
+# Health needs for autistic people
+
+This folder includes analysis code for a series of studies into the health of autistic people in the UK
+
+## Life expectancy for people with diagnoses of autism
 
 This folder includes analysis code estimating the life expectancy of people with diagnoses of autism in the UK.
 
