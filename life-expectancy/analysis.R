@@ -169,10 +169,10 @@ do_analysis <- function (data) {
        female_table = female$d2g)
 }
 
-A_noID <- fread('https://raw.githubusercontent.com/danlewer/autism-life-expectancy/main/simulated-data/A_noIDsim.csv')
-A_ID <- fread('https://raw.githubusercontent.com/danlewer/autism-life-expectancy/main/simulated-data/A_IDsim.csv')
-B_noID <- fread('https://raw.githubusercontent.com/danlewer/autism-life-expectancy/main/simulated-data/B_noIDsim.csv')
-B_ID <- fread('https://raw.githubusercontent.com/danlewer/autism-life-expectancy/main/simulated-data/B_IDsim.csv')
+A_noID <- fread('https://raw.githubusercontent.com/danlewer/autism/main/life-expectancy/simulated-data/A_IDsim.csv')
+A_ID <- fread('https://raw.githubusercontent.com/danlewer/autism/main/life-expectancy/simulated-data/A_IDsim.csv')
+B_noID <- fread('https://raw.githubusercontent.com/danlewer/autism/main/life-expectancy/simulated-data/B_noIDsim.csv')
+B_ID <- fread('https://raw.githubusercontent.com/danlewer/autism/main/life-expectancy/simulated-data/B_IDsim.csv')
 
 set.seed(4668)
 
